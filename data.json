@@ -1,0 +1,125 @@
+{
+  "tabs": [
+    {
+      "id": 1,
+      "title": "Estructura",
+      "label": "Estructura",
+      "questions": [
+        {
+          "title": "¿Qué tipo de procedimento sigue su empresa?",
+          "questionId": "1",
+          "type": "radio",
+          "items": [
+            {
+              "textId": "1.1",
+              "text": "Apertura"
+            },
+            {
+              "textId": "1.2",
+              "text": "Transformación"
+            }
+          ]
+        },
+        {
+          "title": "¿La estructura jurídica de su empresa es unipersonal?",
+          "id": "2",
+          "type": "checkbox",
+          "items": [
+            {
+              "textId": "2.1",
+              "text": "Sí"
+            },
+            {
+              "textId": "2.2",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "title": "¿Qué tipo de actividades desarrollará su empresa?",
+          "id": "3",
+          "type": "radio",
+          "items": [
+            {
+              "textId": "3.1",
+              "text": "Actividades industriales"
+            },
+            {
+              "textId": "3.2",
+              "text": "Provedor de servicios"
+            },
+            {
+              "textId": "3.3",
+              "text": "Otro"
+            }
+          ]
+        },
+        {
+          "title": "¿Desea utilizar el estado pro-forma que se rellenará automáticamente tras cumplimentar el formulario?",
+          "id": "4",
+          "type": "radio",
+          "items": [
+            {
+              "textId": "4.1",
+              "text": "Sí"
+            },
+            {
+              "textId": "4.2",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "title": "¿Entra su empresa en alguna de estas categorías?",
+          "id": "5",
+          "type": "checkbox",
+          "items": [
+            {
+              "textId": "5.1",
+              "text": "Artrsanía"
+            },
+            {
+              "textId": "5.2",
+              "text": "Industrial"
+            },
+            {
+              "textId": "5.3",
+              "text": "Agroindustria"
+            },
+            {
+              "textId": "5.4",
+              "text": "Agricultura"
+            },
+            {
+              "textId": "5.5",
+              "text": "Silvicultura"
+            },
+            {
+              "textId": "5.6",
+              "text": "Comercial y Servicios"
+            },
+            {
+              "textId": "5.7",
+              "text": "Ninguna de las anteriores"
+            }
+          ]
+        },
+        {
+          "title": "¿Quál es el valor de su patrimonio?",
+          "id": "6",
+          "type": "radio",
+          "items": [
+            {
+              "textId": "6.1",
+              "text": "Superior a 2.631.400.800 guaraníes"
+            },
+            {
+              "textId": "6.2",
+              "text": "Menos de 2.631.400.800 guaraníes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
