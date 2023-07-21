@@ -4,15 +4,8 @@ import Checkbox from './Checkbox';
 import data from '../data.json';
 
 function App() {
-  const [formValue, setFormValue] = useState({
-    name: '',
-    weight: '',
-    height: '',
-    food: '',
-    football: false,
-    hockey: true,
-  });
-  // const [formResponses, setFormResponses] = useState({});
+
+  const [formResponses, setFormResponses] = useState({});
 
   const handleChange = (questionId, value) => {
     setFormResponses((prevResponses) => ({
@@ -40,19 +33,19 @@ function App() {
                   <div key={item.textId}>
                     {question.type === 'radio' ? (
                       <Radio
-                        formValue={formValue}
-                        name={question.questionId}
                         label={item.text}
                         id={item.textId}
-                        handleChange={handleChange}
+                        name={question.questionId}
+                        handleChange={() => handleChange(question.id, item.id)} 
+                        formResponses={formResponses}
                       />
                     ) : (
                         <Checkbox
-                          formValue={formValue}
                           name={question.questionId}
                           label={item.text}
                           id={item.textId}
-                          handleChange={handleChange}
+                          handleChange={() => handleChange(question.id, item.id)} 
+                          formResponses={formResponses}
 
                       />
                     )}
