@@ -15,6 +15,7 @@ const checkboxOptions = [
   { label: 'Volei', id: 3},
 ];
 const nomeDoJogo = "jogo"
+
 console.log(radioOptions)
 
 function App() {
