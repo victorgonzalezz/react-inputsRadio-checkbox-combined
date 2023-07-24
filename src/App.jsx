@@ -1,61 +1,45 @@
-import React, { useState } from 'react';
+// import { useState } from 'react';
 import Radio from './Radio';
 import Checkbox from './Checkbox';
-import data from '../data.json';
+// import data from '../data.json';
+
+const radioOptions = [
+  { label: 'Salad', id: 1},
+  { label: 'Steak', id: 2},
+  { label: 'Cuscus', id: 3},
+];
+
+const checkboxOptions = [
+  { label: 'Football', id: 1},
+  { label: 'Futevolei', id: 2},
+  { label: 'Volei', id: 3},
+];
+const nomeDoJogo = "jogo"
+console.log(radioOptions)
 
 function App() {
 
-  const [formResponses, setFormResponses] = useState({});
-
-  const handleChange = (questionId, value) => {
-    setFormResponses((prevResponses) => ({
-      ...prevResponses,
-      [questionId]: value,
-    }));
-  };
-
   return (
     <>
-      <div>
-        <header>
-          <h1>Começamos por aqui</h1>
-        </header>
-      </div>
+      <p>Primeira pergunta: </p>
+        {radioOptions.map(({ label, id }) => (
+          <Radio
+            key={id}
+            id={id}
+            name={nomeDoJogo}
+            label={label}
+          />
+        ))}
 
-      {data.tabs.map((tab) => (
-        <div key={tab.id}>
-          <h2>{tab.title}</h2>
-          <div>
-            {tab.questions.map((question) => (
-              <div key={question.questionId}>
-                <h3>{question.title}</h3>
-                {question.items.map((item) => (
-                  <div key={item.textId}>
-                    {question.type === 'radio' ? (
-                      <Radio
-                        label={item.text}
-                        id={item.textId}
-                        name={question.questionId}
-                        handleChange={() => handleChange(question.id, item.id)} 
-                        formResponses={formResponses}
-                      />
-                    ) : (
-                        <Checkbox
-                          name={question.questionId}
-                          label={item.text}
-                          id={item.textId}
-                          handleChange={() => handleChange(question.id, item.id)} 
-                          formResponses={formResponses}
-
-                      />
-                    )}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+      <p>Segunda Pergunta: </p>
+        {checkboxOptions.map(({ label, id }) => (
+          <Checkbox
+            key={id}
+            id={id}
+            name={id}
+            label={label}
+          />
+        ))}
     </>
   );
 }

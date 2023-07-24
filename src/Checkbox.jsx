@@ -1,12 +1,11 @@
 // eslint-disable-next-line react/prop-types
-const Checkbox = ({ label, id, handleChange, name }) => (
+const Checkbox = ({ label, id, name }) => (
   <>
     <input
       type="checkbox"
       id={id}
       name={name}
       value={id}
-      onChange={handleChange}
     />
     <label htmlFor={id}>{label}</label>
     <br />
